@@ -8,7 +8,7 @@ A Full-Stack Blog Application where users can sign in with Google to create publ
 
 ## To Use
 
-### Deployed Version: https://ft-blog-application-v1.herokuapp.com/dashboard
+### Deployed Version: https://ft-blog-application-v1.herokuapp.com
 
 Login using Google Authentication
 Head to the Dashboard and click the + icon to write your first post
