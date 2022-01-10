@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const User = require("../models/User");
 
 module.exports = function (passport) {
+  const id =
+    "326712317858-frkvhq3jbh4o6douo37gfj86buf6hg6v.apps.googleusercontent.com";
+  const secret = "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";
   passport.use(
     new GoogleStrategy(
       {
-        clientID: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        clientID: id,
+        clientSecret: secret,
         callbackURL: "/auth/google/callback",
         proxy: true,
       },
