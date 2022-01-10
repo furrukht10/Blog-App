@@ -1,5 +1,5 @@
 <h1 align ="center" > Blog Application </h1>
-A Full-Stack Blog Application where users can sign in with Google to create public or private posts 
+A Full Stack Blog Application where users can sign in with Google to create public or private posts 
 
 - Utilized Node.js, Express.js, and MongoDB to develop a RESTful API and run the Backend
 - Utilized Google OAuth and Passport.js for secure login using Google
