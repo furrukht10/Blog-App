@@ -8,13 +8,29 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-const connectDB = require("./config/db");
+// const connectDB = require("./config/db");
 
 // Load config
 dotenv.config({ path: "./config/config.env" });
 
 // Passport config
 require("./config/passport")(passport);
+
+//Database configuration
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    });
+
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
 
 connectDB();
 
